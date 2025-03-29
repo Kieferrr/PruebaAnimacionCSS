@@ -79,12 +79,18 @@ footer {
     gap: 8px;
     align-items: center;
     text-shadow: 2px 2px 0px #000;
+    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.5)); 
 
 }
 
 .navlogo img {
     width: 30px;
     height: 30px;
+    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.5)); 
+
+
+
+
 }
 
 nav i {
@@ -112,6 +118,7 @@ h1 {
     font-size: 36px;
     letter-spacing: 5px;
     text-shadow: 2px 2px 0px #000;
+
 }
 
 /* carta  */
@@ -463,7 +470,7 @@ nav a {
     }
 
     h1 {
-        font-size: 45px;
+        font-size: 39px;
     }
 
     nav {
