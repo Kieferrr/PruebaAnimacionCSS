@@ -413,7 +413,7 @@ nav a {
 }
 
 .pizzaname {
-    font-size: 20px;
+    font-size: 26px;
 }
 
 .buybutton {
@@ -492,6 +492,16 @@ nav a {
 
     #menu {
         flex-direction: column;
+    }
+
+    .buybutton {
+        width: 110px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .pizzaname {
+       font-size: 25px;
     }
 
 
