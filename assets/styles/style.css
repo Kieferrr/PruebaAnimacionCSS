@@ -281,10 +281,42 @@ h1 {
 
 .contacticon {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     font-size: 20px;
     text-shadow: 2px 2px 0px #000;
+    align-items: center;
 }
+
+.contactoemail {
+    display: flex;
+    font-size: 16px;
+}
+
+#email {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#send {
+    background-color: #F4D03F;
+    border: none;
+    width: 80px;
+    height: 30px;
+    transition: all 0.3s ease-out;
+    border-radius: 8px;
+}
+
+#send:hover {
+    background-color: #F39C12;
+    transform: scale(1.05);
+}
+
+#send:active {
+    background-color: #D35400;
+    transform: scale(0.95);
+}
+
 
 footer a {
     color: inherit;
@@ -437,7 +469,7 @@ nav a {
             'nav main'
             'footer footer';
         height: 100vh;
-        grid-template-rows: 15% 1fr 7%;
+        grid-template-rows: 15% 1fr 9%;
     }
 
     .nextpizza {
@@ -446,6 +478,7 @@ nav a {
 
     nav {
         flex-direction: column;
+
     }
 
     .pizzamobile, .pizzatablet {
@@ -501,8 +534,14 @@ nav a {
     }
 
     .pizzaname {
-       font-size: 25px;
+    font-size: 25px;
     }
+
+    .contactoemail {
+        display: inline;
+    }
+
+
 
 
 }
