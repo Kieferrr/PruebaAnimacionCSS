@@ -6,6 +6,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .grid-container {
     display: grid;
     grid-template-rows: 10% 15% 1fr 15%;
@@ -35,7 +39,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
@@ -116,6 +119,7 @@ h1 {
     transition: all 0.3s ease-out;
     color: #2C3E50;
     font-size: 20px;
+    background-color: #F8F1E5;
 }
 
 .nextpizza:hover {
@@ -129,6 +133,11 @@ h1 {
 
 
 /* card */
+
+.pizzatablet {
+    display: none !important;
+
+}
 
 .pizzacard {
     background-color: #E1B07E;
@@ -144,6 +153,7 @@ h1 {
     gap: 30px;
     transition: all 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin: 30px 0px;
 }
 
 .pizzacard:hover {
@@ -167,7 +177,7 @@ h1 {
     }
 
     50% {
-        filter: saturate(1.3);
+        filter: saturate(1.2);
     }
 
     100% {
@@ -301,4 +311,105 @@ footer a {
 
 .X:active {
     transform: scale(0.9);
+}
+
+/* TABLET  */
+
+@media (min-width: 576px) {
+
+
+/* cambios en el nav  */
+
+nav i {
+    display: none !important;
+}
+
+#menu {
+    display: flex;
+    gap: 35px;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    
+}
+
+.pizzatablet {
+    display: flex !important;
+}
+
+.pizzacard {
+    grid-area: card;
+    width: 100%;
+    max-width: 250px;
+    height: 400px;
+    gap: 20px;
+}
+
+
+.pizzatype button {
+    width: 80px;
+    height: 35px;
+}
+
+.pizzaname {
+    font-size: 20px;
+}
+
+.buybutton {
+    width: 120px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+@media (min-width: 992px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        grid-template-areas:
+            'nav header'
+            'nav main'
+            'nav main'
+            'footer main';
+        height: 100vh; 
+        grid-template-rows: 15% 1fr;
+    }
+
+    .nextpizza {
+        display: none;
+    }
+
+
+    main {
+        display: grid !important;
+        grid-template-columns: auto auto !important;
+    }
+
+
+
+
+
+
+
+
 }
