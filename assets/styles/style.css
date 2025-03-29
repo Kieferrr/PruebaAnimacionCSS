@@ -3,19 +3,19 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    
+
 }
 
 .grid-container {
     display: grid;
     grid-template-rows: 10% 15% 1fr 15%;
-    grid-template-areas: 
-    'nav'
-    'header'
-    'main'
-    'footer';
+    grid-template-areas:
+        'nav'
+        'header'
+        'main'
+        'footer';
     height: 100vh;
-    
+
 }
 
 nav {
@@ -26,8 +26,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0px 16px
-    
-
 }
 
 header {
@@ -157,14 +155,31 @@ h1 {
     padding-top: 15px;
     height: 200px;
     transition: transform 1s ease-out;
-    
+    animation: animacion-color;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+
 }
+
+@keyframes animacion-color {
+    0% {
+        filter: saturate(0.7);
+    }
+
+    50% {
+        filter: saturate(1.3);
+    }
+
+    100% {
+        filter: saturate(0.7);
+    }
+
+}
+
 
 .pizzacard:hover img {
     transform: rotate(360deg);
 }
-
-
 
 .pizzaname {
     font-size: 30px;
@@ -287,6 +302,3 @@ footer a {
 .X:active {
     transform: scale(0.9);
 }
-
-
-
