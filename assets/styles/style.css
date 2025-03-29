@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    
 
 }
 
@@ -68,6 +69,7 @@ footer {
 
 #menu {
     display: none;
+    text-shadow: 2px 2px 0px #000;
 }
 
 /* navbar */
@@ -76,6 +78,7 @@ footer {
     display: flex;
     gap: 8px;
     align-items: center;
+    text-shadow: 2px 2px 0px #000;
 
 }
 
@@ -108,9 +111,14 @@ h1 {
     font-family: 'lobster', sans-serif;
     font-size: 36px;
     letter-spacing: 5px;
+    text-shadow: 2px 2px 0px #000;
 }
 
 /* carta  */
+
+.pizzasdesktop {
+    display: none;
+}
 
 /* boton página siguiente  */
 
@@ -258,6 +266,7 @@ h1 {
 .contacto {
     font-size: 20px;
     text-align: center;
+    text-shadow: 2px 2px 0px #000;
 
 }
 
@@ -267,6 +276,7 @@ h1 {
     display: flex;
     gap: 40px;
     font-size: 20px;
+    text-shadow: 2px 2px 0px #000;
 }
 
 footer a {
@@ -330,6 +340,42 @@ nav i {
     font-size: 20px;
 }
 
+.boton1 {
+    transition: transform 0.3s ease;
+}
+
+.boton1:hover {
+    transform: scale(1.1);
+}
+
+.boton1:active {
+    transform: scale(0.9);
+}
+
+.boton2 {
+    transition: transform 0.3s ease;
+}
+
+.boton2:hover {
+    transform: scale(1.1);
+}
+
+.boton2:active {
+    transform: scale(0.9);
+}
+
+.boton3 {
+    transition: transform 0.3s ease;
+}
+
+.boton3:hover {
+    transform: scale(1.1);
+}
+
+.boton3:active {
+    transform: scale(0.9);
+}
+
 nav ul {
     list-style-type: none;
 }
@@ -369,47 +415,78 @@ nav a {
 }
 
 
-
-
-
-
-
-
-
-
 }
 
 
+/* desktop  */
 
 @media (min-width: 992px) {
 
     .grid-container {
         display: grid;
-        grid-template-columns: 20% 1fr;
+        grid-template-columns: 15% 1fr;
         grid-template-areas:
             'nav header'
             'nav main'
-            'nav main'
-            'footer main';
-        height: 100vh; 
-        grid-template-rows: 15% 1fr;
+            'footer footer';
+        height: 100vh;
+        grid-template-rows: 15% 1fr 7%;
     }
 
     .nextpizza {
         display: none;
     }
 
+    nav {
+        flex-direction: column;
+    }
 
-    main {
-        display: grid !important;
-        grid-template-columns: auto auto !important;
+    .pizzamobile, .pizzatablet {
+        display: none !important;
     }
 
 
+    .pizzasdesktop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0px 200px;
+        margin: 0px 20px;
+    }
+
+    .pizzacard {
+        width: 240px;
+    }
 
 
+    .pizzatype {
+        gap: 15px;
+    }
 
+    h1 {
+        font-size: 45px;
+    }
 
+    nav {
+        justify-content: start;
+        gap: 80px;
+    }
+
+    .navlogo {
+        flex-direction: column;
+        gap: 50px;
+        font-size: 30px;
+        padding: 40px;
+    }
+
+    .navlogo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #menu {
+        flex-direction: column;
+    }
 
 
 }
+
